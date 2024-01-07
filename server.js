@@ -6,7 +6,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port =4000; // You can use any available port
+const port =4000; 
 const cors = require('cors');
 
 app.use(cors());
@@ -20,9 +20,6 @@ app.post('/submit_form', (req, res) => {
   const phone = req.body.phone;
   const slot = req.body.slot;
 
-  
-
-  // Handle the form data as needed (e.g., save to a database, perform some action)
   console.log('Form data received:');
   console.log('Name:', name);
   console.log('Email:', email);
@@ -56,9 +53,6 @@ axios.post(vonageApiUrl, null, { params: requestData })
   });
 
 
-
-
-  // Respond to the chatbot user (adjust as needed)
   res.send('Form data received successfully!');
 });
 
